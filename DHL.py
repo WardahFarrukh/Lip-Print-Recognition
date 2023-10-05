@@ -88,7 +88,7 @@ RF_model.fit(feature_extractor, y_train)  # For sklearn no one hot encoding
 X_test_feature = RESNET_model.predict(x_test)
 X_test_features = X_test_feature.reshape(X_test_feature.shape[0], -1)
 
-# Now predict using the trained RF model.
+# Now predict using the trained model.
 prediction_RF = RF_model.predict(X_test_features)
 prediction_RF = le.inverse_transform(prediction_RF)
 prediction = RF_model.predict(X_test_features)
